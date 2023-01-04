@@ -1,7 +1,27 @@
 <div>
-    <div>
-        <input type="text">
-        <textarea name="" cols="30" rows="10"></textarea>
-        <button>Guardar</button>
+  <div class="m-10">
+    <div class="mb-3">
+      <input 
+      type="text" 
+      placeholder="Ingrese nombre tarea"
+      #nom />
     </div>
+    <div class="mb-3">
+      <textarea
+        #des
+        cols="30"
+        rows="10"
+        class="rounded-lg"
+        placeholder="Ingrese Descripción"
+      ></textarea>
+    </div>
+    <div class="mb-3">
+      <button  
+      class="rounded-lg bg-sky-600 text-white pl-10 pr-10 pb-1 pt-1">
+      (click)="addTarea(nom.value, des.value)"
+        <strong>Guardar</strong>
+      </button>
+    </div>
+  </div>
 </div>
+<div>{{nombre}}</div>
