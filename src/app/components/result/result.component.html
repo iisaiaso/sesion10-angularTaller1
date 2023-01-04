@@ -1,10 +1,13 @@
-<div class="m-10">
-    <h1>Lista de tareas</h1>
-    <div class="rounded-lg border-neutral-200 bg-red-400 m-10">
-      <ul class="m-10">
-        <li>Tarea 1</li>
-        <li>Tarea 1</li>
-        <li>Tarea 1</li>
-      </ul>
-    </div>
+<div class="mt-10">
+  <h1>Lista de tareas</h1>
+  <div class="rounded-lg border border-neutral-200 mt-5 mb-5 w-full h-full">
+    <ul class="pl-10 pb-5 list-disc" *ngFor="let lista of dataResul">
+      <li>
+        {{ lista.nom }}
+        <ul class="list-none">
+          <li>{{ lista.des }}</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </div>

@@ -1,12 +1,13 @@
-<div>
-  <div class="m-10">
-    <div class="mb-3">
+<div class="grid grid-cols-2 ">
+  <div class="m-10 flex flex-col items-center">
+    <div class="mb-3 mr-10">
       <input 
+      class="rounded-lg"
       type="text" 
-      placeholder="Ingrese nombre tarea"
+      placeholder="Ingrese nombre tarea" 
       #nom />
     </div>
-    <div class="mb-3">
+    <div class="mb-3 ml-1">
       <textarea
         #des
         cols="30"
@@ -16,12 +17,20 @@
       ></textarea>
     </div>
     <div class="mb-3">
-      <button  
-      class="rounded-lg bg-sky-600 text-white pl-10 pr-10 pb-1 pt-1">
-      (click)="addTarea(nom.value, des.value)"
+      <button class="rounded-lg bg-sky-600 text-white pl-10 pr-10 pb-1 pt-1" (click)="addTarea(nom.value, des.value)">
         <strong>Guardar</strong>
       </button>
     </div>
   </div>
+  <app-result 
+  [nombreResul]="nombre"
+  [descipcionResul]="descripcion"
+  [dataResul]="data"
+  >
+  </app-result>
 </div>
-<div>{{nombre}}</div>
+<div>
+  <!-- {{ data}} -->
+  <!-- {{ descripcion }} -->
+</div>
+
